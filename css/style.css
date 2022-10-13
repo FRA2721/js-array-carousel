@@ -1,0 +1,91 @@
+/* programmer: Francesco Cimino; */
+/* project: Carousel Mono Array; */
+/* language: css; */
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* container */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* card-img */
+.card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* .left-section */
+.left-section{
+    width: 50%;
+}
+
+.left-section .active {
+    display: block;
+}
+
+
+
+/* right-section */
+.right-section {
+    background-color: grey;
+    position: relative;
+    width: 300px;
+    height: 60vh;
+}
+
+.right-section  .active {
+    border: 3px solid black;
+}
+
+
+
+/* up-arrow */
+.up-arrow {
+    top: 30px;
+}
+
+/* down-arrow */
+.down-arrow {
+    bottom: 30px;
+}
+
+/* up/down-arrow */
+.up-arrow,
+.down-arrow {
+    background-color: white;
+    color: black;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    border-radius: 100px 150px;
+    line-height: 30px;
+    padding: 0 20px;
+    z-index: 1;
+    transition-duration: 1s;
+}
+
+/* arrow-hover */
+.up-arrow:hover,
+.down-arrow:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}

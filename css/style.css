@@ -29,6 +29,18 @@
     height: 100vh;
 }
 
+.card-img-1 {
+    display: none;
+    width: 100%;
+    height: 60vh;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 
 /* .left-section */
@@ -44,7 +56,6 @@
 
 /* right-section */
 .right-section {
-    background-color: grey;
     position: relative;
     width: 300px;
     height: 60vh;
@@ -52,6 +63,21 @@
 
 .right-section  .active {
     border: 3px solid black;
+}
+
+
+
+/* small-img */
+.small-img{
+    opacity: 0.5;
+}
+
+.small-img.active {
+    opacity: 1;
+}
+
+.small-img {
+    height: calc(100% / 5);
 }
 
 
@@ -77,7 +103,7 @@
     border-radius: 100px 150px;
     line-height: 30px;
     padding: 0 20px;
-    z-index: 1;
+    z-index: 999;
     transition-duration: 1s;
 }
 

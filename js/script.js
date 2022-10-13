@@ -3,12 +3,7 @@
 // language: javascript;
 
 // imgs-list
-const imgsList = [
-    "img/01.jpg",
-    "img/02.jpg",
-    "img/03.jpg",
-    "img/04.jpg",
-    "img/05.jpg",
+const imgsList = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg",
 ];
 
 const card = document.querySelector(".left-section");
@@ -33,12 +28,12 @@ for (let i = 0; i < imgsList.length; i++) {
 
 // active-class-section
 const cardImg = document.getElementsByClassName("card-img-1");
-const cardSmallImg = document.getElementsByClassName("small-img");
+const smallImg = document.getElementsByClassName("small-img");
 
 let arrowPointer = 0;
 
 cardImg[arrowPointer].classList.add("active");
-cardSmallImg[arrowPointer].classList.add("active");
+smallImg[arrowPointer].classList.add("active");
 
 //onclick-section
 const downArrowBtn = document.querySelector(".down-arrow");
@@ -48,7 +43,7 @@ const upArrowBtn = document.querySelector(".up-arrow");
 downArrowBtn.addEventListener("click", function() {
     
     cardImg[arrowPointer].classList.remove("active");
-    cardSmallImg[arrowPointer].classList.remove("active");
+    smallImg[arrowPointer].classList.remove("active");
 
     if (arrowPointer < 4){
         arrowPointer++;
@@ -58,14 +53,14 @@ downArrowBtn.addEventListener("click", function() {
     }
 
     cardImg[arrowPointer].classList.add("active");
-    cardSmallImg[arrowPointer].classList.add("active");
+    smallImg[arrowPointer].classList.add("active");
 });
 
 // onclick-up-arrow-btn
  upArrowBtn.addEventListener("click", function() {
 
     cardImg[arrowPointer].classList.remove("active");
-    cardSmallImg[arrowPointer].classList.remove("active");
+    smallImg[arrowPointer].classList.remove("active");
 
     if (arrowPointer > 0){
         arrowPointer--;
@@ -75,21 +70,21 @@ downArrowBtn.addEventListener("click", function() {
     }
 
     cardImg[arrowPointer].classList.add("active");
-    cardSmallImg[arrowPointer].classList.add("active");
+    smallImg[arrowPointer].classList.add("active");
 });
 
 // loop
-for (let i = 0; i < cardSmallImg.length; i++) {
-    const items = cardSmallImg[i];
+for (let i = 0; i < smallImg.length; i++) {
+    const items = smallImg[i];
     items.addEventListener("click", function() {
 
         cardImg[arrowPointer].classList.remove("active");
-        cardSmallImg[arrowPointer].classList.remove("active");
+        smallImg[arrowPointer].classList.remove("active");
         
         arrowPointer = i;
 
         cardImg[arrowPointer].classList.add("active");
-        cardSmallImg[arrowPointer].classList.add("active")
+        smallImg[arrowPointer].classList.add("active")
         
     });  
 }
